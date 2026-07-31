@@ -9,6 +9,7 @@ import db
 app = Flask(__name__)
 app.secret_key = "change-me-in-production"
 
+CORS(app, origins=["http://localhost:80"])
 
 app.config.update(
     SESSION_COOKIE_SAMESITE="None",
